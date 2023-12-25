@@ -1,2 +1,0 @@
-This is another file used to check .git/objects
-This changed remotely origin/main
