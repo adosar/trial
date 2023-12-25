@@ -1,3 +1,7 @@
+r"""
+This is a module docstring
+"""
+
 class Feature:
     r"""This is an expirimental feature."""
     x1 = 2
