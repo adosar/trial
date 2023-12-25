@@ -1,2 +1,2 @@
 This is another file used to check .git/objects
-This changed in local branch.
+This changed remotely origin/main
