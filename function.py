@@ -20,7 +20,7 @@ def f(x):
 
 __version__ = "2.0.0"
 __author__ = "Foo Bar"
-__tag__ = 'new'
+__tag__ = 'THIS IS THE TAG'
 
 
 def g(x):
