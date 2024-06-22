@@ -21,3 +21,7 @@ def f(x):
 __version__ = "2.0.0"
 __author__ = "Foo Bar"
 __tag__ = 'new'
+
+
+def g(x):
+    return 2
