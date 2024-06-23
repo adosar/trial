@@ -1,26 +1,17 @@
-name: PyLint with dynamic badge
+name: PyLint
 on: push
 jobs:
-  pylint:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: Silleellie/pylint-github-action@v2
-            
-#name: PyLint
-#on: push
-#jobs:
-#  build:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Install Python
-#        uses: actions/setup-python@v5
-#        with:
-#          python-version: "3.11"
-#      - name: Install dependencies
-#        run: |
-#          python -m pip install --upgrade pip
-#          pip install pylint
-#      # Update output format to enable automatic inline annotations.
-#      - name: Run pylint
-#        run: pylint '*.py'
+      - uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint
+      - name: Run pylint
+        run: pylint '*.py'
