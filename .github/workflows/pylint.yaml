@@ -2,6 +2,7 @@ name: PyLint with dynamic badge
 on: push
 jobs:
   pylint:
+    runs-on: ubuntu-latest
     steps:
     - uses: Silleellie/pylint-github-action@v2
             
