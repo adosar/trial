@@ -1,0 +1,17 @@
+name: Lint the code with Pylint
+run-name: This is the ${{ github.actor }} run name
+
+runs:
+  on: [push]
+
+jobs:
+  lint-the-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install pylint
+        run: |
+          pip install pylint
+      - name: Test with pylint
+        uses: actions/checkout@v4
+        run: |
+          pylint '*.py'
