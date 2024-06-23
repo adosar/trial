@@ -8,10 +8,10 @@ jobs:
   lint-the-code:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Install pylint
         run: |
           pip install pylint
       - name: Test with pylint
-        uses: actions/checkout@v4
         run: |
           pylint '*.py'
