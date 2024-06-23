@@ -1,8 +1,9 @@
 name: Lint the code with Pylint
 run-name: This is the ${{ github.actor }} run name
 
-runs:
-  on: push
+on:
+  push:
+    branches: [main]
 
 jobs:
   lint-the-code:
