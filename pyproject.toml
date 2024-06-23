@@ -1,4 +1,0 @@
-[tool.pylint.main]
-jobs = 0
-disable = ["C"]
-fail-under = 8
