@@ -1,7 +1,6 @@
-- uses: Silleellie/pylint-github-action@v2
-  with:
-    lint-path: .
-
+- name: PyLint with dynamic badge
+  uses: Silleellie/pylint-github-action@v2
+            
 #name: PyLint
 #on: push
 #jobs:
