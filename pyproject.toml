@@ -2,4 +2,3 @@
 jobs = 0
 disable = ["C"]
 fail-under = 9
-exit-zero = true
