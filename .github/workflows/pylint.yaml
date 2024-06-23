@@ -1,5 +1,9 @@
-- name: PyLint with dynamic badge
-  uses: Silleellie/pylint-github-action@v2
+name: PyLint with dynamic badge
+on: push
+jobs:
+  pylint:
+    steps:
+    - uses: Silleellie/pylint-github-action@v2
             
 #name: PyLint
 #on: push
