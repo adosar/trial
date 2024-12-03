@@ -1,8 +1,6 @@
 name: Keep AIdsorb-online awake
 
-on:
-  schedule:
-    - cron: '28 19 * * 2' # Runs 21:40 (UTC, every Monday)
+on: workflow_dispatch
 
 jobs:
   keep-awake:
@@ -11,6 +9,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+
+    - name: Configurate git
+      run: |
+        git config user.name 'github-actions[bot]'
+        git config user.email 'github-actions[bot]@users.noreply.github.com'
 
     - name: Make a dummy commit
       run: |
