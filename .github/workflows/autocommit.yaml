@@ -11,16 +11,21 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
-    - name: Configurate git
-      run: |
-        git config user.name 'github-actions[bot]'
-        git config user.email 'github-actions[bot]@users.noreply.github.com'
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
 
-    - name: Make a dummy commit
-      run: |
-        date > last_awake.txt
-        git add last_awake.txt
-        git commit -m "Keep AIdsorb-online awake: $(date)"
-        git push
+    - name: Install selenium
+      run: pip install selenium
+
+    - name: Visit app
+      run: >
+        python -c '
+        from selenium import webdriver;
+        driver = webdriver.Chrome();
+        driver.get("https://aidsorb-online.streamlit.app/");
+        driver.quit()
+        '
