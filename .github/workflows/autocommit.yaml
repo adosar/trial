@@ -2,6 +2,9 @@ name: Keep AIdsorb-online awake
 
 on: workflow_dispatch
 
+permissions:
+  contents: write
+
 jobs:
   keep-awake:
     runs-on: ubuntu-latest
