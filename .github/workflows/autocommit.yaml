@@ -6,6 +6,9 @@ on: workflow_dispatch
 jobs:
   My first job:
     runs-on: ubuntu-latest
-    run: |
-      echo hello world
-      echo foo bar
+    steps:
+      - name: Echo
+        run: echo hello world
+      - name: commit
+        run: |
+          git ls-files
