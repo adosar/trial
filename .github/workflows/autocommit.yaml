@@ -1,14 +1,20 @@
-name: GitHub action demo
-run-name: I am running the demo
+name: Keep AIdsorb-online awake
 
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: '28 19 * * 2' # Runs 21:40 (UTC, every Monday)
 
 jobs:
-  first_job:
+  keep-awake:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Echo
-        run: echo hello world
-      - name: commit
-        run: |
-          git ls-files
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Make a dummy commit
+      run: |
+        date > last_awake.txt
+        git add last_awake.txt
+        git commit -m "Keep AIdsorb-online awake: $(date)"
+        git push
