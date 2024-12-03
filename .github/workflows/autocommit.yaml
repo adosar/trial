@@ -1,0 +1,11 @@
+name: GitHub action demo
+run-name: I am running the demo
+
+on: workflow_dispatch
+
+jobs:
+  My first job:
+    runs-on: ubuntu-latest
+    run: |
+      echo hello world
+      echo foo bar
