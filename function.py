@@ -1,6 +1,6 @@
 def f(x):
     """
-    Return the multiple of i\nput by 6.
+    Return the multiple of input by 6.
 
     Extented descriptions of the function.
 
