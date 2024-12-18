@@ -15,12 +15,7 @@ def f(x):
         The output value
     """
     return 6*x
-
-
-__version__ = "2.0.0"
-__author__ = "Foo Bar"
-__tag__ = 'THIS IS THE TAG'
-
+    
 
 def g(x):
     return 2
