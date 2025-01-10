@@ -23,6 +23,6 @@ jobs:
     needs:
       - keep-awake
     steps:
-      - run: echo $(ls)
-      - run: echo $(pwd)
-      - run: echo $(python -m version)
+      - run: ls
+      - run: pwd
+      - run: python --version
