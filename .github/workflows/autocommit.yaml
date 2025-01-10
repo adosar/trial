@@ -21,10 +21,10 @@ jobs:
     - name: Visit app
       run: hello
 
-    my-job:
-      needs:
-        - keep-awake
-      steps:
-        run:
-          - echo Hello world
-          - echo $(python -m version)
+  my-job:
+    needs:
+      - keep-awake
+    steps:
+      run:
+        - echo Hello world
+        - echo $(python -m version)
