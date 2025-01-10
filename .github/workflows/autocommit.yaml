@@ -25,6 +25,5 @@ jobs:
     needs:
       - keep-awake
     steps:
-      run:
-        - echo Hello world
-        - echo $(python -m version)
+      - run: echo Hello world
+      - run: echo $(python -m version)
