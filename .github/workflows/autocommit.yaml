@@ -1,29 +1,15 @@
 name: Foo
 
-on: push
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tag to deploy'
+        required: true
 
 jobs:
-  job1:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - run: pwd
-
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.8'
-
-  job2:
-    runs-on: ubuntu-latest
-    needs:
-      - job1
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - run: ls
-      - run: pwd
-      - run: python --version
+      - name: Print the tag
+        run: echo "Deploying tag: ${{ github.event.inputs.tags }}"
