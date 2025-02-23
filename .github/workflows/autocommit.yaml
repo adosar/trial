@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print the tag
-        run: echo "Deploying tag: ${{ github.event.inputs.tags }}"
+        run: echo "Deploying tag: ${{ inputs.tags }}"
