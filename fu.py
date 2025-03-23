@@ -1,15 +1,5 @@
 def f(x):
     """
-    Return the multiple of i\nput by 6.
-
-    Add here
-    Extented descriptions of the function.
-
-    Parameters
-    ----------
-    x : float
-        Input value
-
     Returns
     -------
     float
@@ -26,3 +16,5 @@ __tag__ = 'THIS IS THE TAG'
 
 def g(x):
     return 2
+
+asdasd
