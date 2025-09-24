@@ -23,3 +23,6 @@ __tag__ = 'THIS IS THE TAG'
 
 def g(x):
     return 2
+
+def pri(x):
+    return 2
