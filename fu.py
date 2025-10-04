@@ -11,6 +11,8 @@ def f(x):
     -------
     float
         The output values
+    int
+        The output values
     """
     print('On version 2.0.0')
     return 6*x
