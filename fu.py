@@ -5,7 +5,7 @@ def f(x):
     Parameters
     ----------
     x : float
-        Input value
+        Input values
 
     Returns
     -------
