@@ -1,0 +1,19 @@
+# .github/workflows/test-tag-trigger.yml
+name: Test Tag Trigger
+
+on:
+  push:
+    branches:
+      - master   # branch pushes only
+
+jobs:
+  show-info:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')  # only runs for tag pushes
+    steps:
+      - name: Show push info
+        run: |
+          echo "GITHUB_REF: $GITHUB_REF"
+          echo "Event: $GITHUB_EVENT_NAME"
+          echo "SHA: $GITHUB_SHA"
+          echo "This job is running because this is a tag push!"
