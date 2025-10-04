@@ -10,7 +10,7 @@ def f(x):
     Returns
     -------
     float
-        The output value
+        The output values
     """
     print('On version 2.0.0')
     return 6*x
