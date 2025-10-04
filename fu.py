@@ -6,10 +6,6 @@ def f(x):
     return 6*x
 
 
-__author__ = "Foo Bar"
-__tag__ = 'THIS IS THE TAG'
-
-
 def g(x):
     return 2
 
