@@ -4,8 +4,6 @@ def f(x):
 
     Parameters
     ----------
-    x : float
-        Input values
 
     """
     print('On version 2.0.0')
