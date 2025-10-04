@@ -15,6 +15,8 @@ def f(x):
         The output values
     bool
         The output values
+    bool
+        The output values
     """
     print('On version 2.0.0')
     return 6*x
