@@ -4,7 +4,7 @@ name: Test Tag Trigger
 on:
   push:
     branches:
-      - master   # branch pushes only
+      - main   # branch pushes only
 
 jobs:
   show-info:
