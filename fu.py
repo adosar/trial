@@ -7,16 +7,6 @@ def f(x):
     x : float
         Input values
 
-    Returns
-    -------
-    float
-        The output values
-    int
-        The output values
-    bool
-        The output values
-    bool
-        The output values
     """
     print('On version 2.0.0')
     return 6*x
