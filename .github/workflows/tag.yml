@@ -7,9 +7,11 @@ on:
       - main   # branch pushes only
 
 jobs:
-  show-info:
+  build:
+    name: Build distribution 📦
+    if: startsWith(github.ref, 'refs/tags/')  # only build on tag pushes
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')  # only runs for tag pushes
+
     steps:
       - name: Show push info
         run: |
@@ -17,3 +19,4 @@ jobs:
           echo "Event: $GITHUB_EVENT_NAME"
           echo "SHA: $GITHUB_SHA"
           echo "This job is running because this is a tag push!"
+
